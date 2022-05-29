@@ -1,0 +1,19 @@
+{
+  "name": "bank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "tsc:watch": "tsc --watch",
+    "start": "concurrently --kill-others --names tsc,es-dev-server \"npm run tsc:watch\" \"vite\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.2.1",
+    "es-dev-server": "^2.1.0",
+    "typescript": "^4.7.2",
+    "vite": "^2.9.9"
+  }
+}
