@@ -52,3 +52,23 @@ cookieMessage.style.backgroundColor = '#37383d';
 cookieMessage.style.height = `${
   parseFloat(getComputedStyle(cookieMessage).height) + 30
 }px`;
+
+// page scroll
+const scrollBtn = document.querySelector('.btn--scroll-to');
+const scrollToSection = document.querySelector('#section--1');
+
+scrollBtn?.addEventListener('click', (e: Event) => {
+  const coordinates = scrollToSection?.getBoundingClientRect() as DOMRect;
+
+  window.scrollTo(
+    {
+      top: coordinates.top + window.scrollY,
+      left: coordinates?.left + window.scrollX,
+      behavior: 'smooth',
+    }
+    // coordinates?.left + window.scrollX,
+    // coordinates?.top + window.scrollY
+  );
+
+  // scrollToSection?.scrollIntoView();
+});
